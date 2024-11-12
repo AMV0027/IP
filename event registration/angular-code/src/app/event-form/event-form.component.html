@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Event Registration</h1>
+    <form (ngSubmit)="onSubmit()" #registrationForm="ngForm">
+      <div>
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" [(ngModel)]="registrationData.fullName" required />
+      </div>
+      <div>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" [(ngModel)]="registrationData.email" required />
+      </div>
+      <div>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="registrationData.phone" required />
+      </div>
+      <div>
+        <label for="event">Select Event:</label>
+        <select id="event" name="event" [(ngModel)]="registrationData.event" required>
+          <option value="tech">Tech Conference</option>
+          <option value="business">Business Summit</option>
+          <option value="workshop">Workshop</option>
+        </select>
+      </div>
+      <div>
+        <button type="submit" [disabled]="!registrationForm.form.valid">Register</button>
+      </div>
+    </form>
+  
+    <div *ngIf="submitted">
+      <h3>Registration Successful!</h3>
+      <p><b>Name:</b> {{ registrationData.fullName }}</p>
+      <p><b>Email:</b> {{ registrationData.email }}</p>
+      <p><b>Phone:</b> {{ registrationData.phone }}</p>
+      <p><b>Event:</b> {{ registrationData.event }}</p>
+    </div>
+  </div>
+  
