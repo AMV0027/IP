@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marriage Validator</title>
+</head>
+<body>
+    <h1>Marriage Validator</h1>
+    <form action="/validate" method="POST">
+        <label>Husband Age:</label>
+        <input type="number" name="husbandAge" required><br><br>
+        
+        <label>Wife Age:</label>
+        <input type="number" name="wifeAge" required><br><br>
+
+        <button type="submit">Check Eligibility</button>
+    </form>
+    <p id="result"></p>
+</body>
+</html>

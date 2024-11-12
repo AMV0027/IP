@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>marriage validator</title>
+</head>
+<body>  
+    <form onsubmit="validate(); return false;">
+        <h1>
+            Marriage validator
+        </h1>
+        Husband age: <input type="text" id="husband"><br>
+        Wife age: <input type="text" id="wife"><br>
+        <input type="submit" value="submit">
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function validate(){
+            let husbandAge = parseInt(document.getElementById("husband").value);
+            let wifeAge = parseInt(document.getElementById("wife").value);
+
+            if(husbandAge >= 21 && wifeAge >= 18){
+                document.getElementById('result').innerHTML = "Eligible for marriage!";
+            }else{
+                document.getElementById('result').innerHTML = "No for marriage!";
+            }
+        }
+    </script>
+</body>
+</html>
