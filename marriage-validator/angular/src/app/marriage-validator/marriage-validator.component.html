@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Marriage Validator</h1>
+    <label>
+      Husband Age:
+      <input type="number" [(ngModel)]="husbandAge" />
+    </label>
+  
+    <label>
+      Wife Age:
+      <input type="number" [(ngModel)]="wifeAge" />
+    </label>
+  
+    <button (click)="validate()">Submit</button>
+    <p>{{ resultMessage }}</p>
+  </div>
+  
