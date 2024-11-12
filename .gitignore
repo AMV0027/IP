@@ -1,2 +1,18 @@
+# Ignore the specific file
 imp.txt
+
+# Ignore the angular-code folder in marriage-validator
 /marriage-validator/angular-code
+
+# Node.js dependencies
+node_modules/
+
+# Build output directories
+dist/
+build/
+
+# Ignore IDE files
+*.log
+.vscode/
+.idea/
+.DS_Store
